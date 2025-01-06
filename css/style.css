@@ -5,22 +5,29 @@ html {
 	margin: 0;
 }
 
-body {
+body{
 	color: #333333;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	line-height: 1.6;
-	background-color: #48003b;
-	
+}
+.main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: radial-gradient(circle at 40% -10%, #d706b8, #000, #33144a);
+
+
 }
 .myCitation {
 	width: 500px;
 	height: 400px;
-	border: 2px solid white;
-	text-align:end;
-	background-color: rgb(100, 14, 97);
+	text-align:end;	
 	margin-left: 50px;
 	margin-top: 50px;
+	border: 2px solid white;
+
 }
 .myText {
 	
@@ -34,13 +41,7 @@ body {
 	font-style: italic;
 	font-size: small;
 }
-blockquote {
-	display: block;
-	margin: -250px auto;
-	border: none;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	margin-top: 10px;
-}
+
 
 blockquote h3 {
 	font-size: 21px;
@@ -48,14 +49,17 @@ blockquote h3 {
 blockquote h3::before{	
 content: open-quote;
 font-weight: bold;
-font-size: 50px;
+font-size: 5rem;
+font-style: ;
 color: white;
+;
 }
 blockquote h3::after{
 	content: close-quote;
 	font-weight: bold;
-	font-size: 50px;
+	font-size: 5rem;
 	color: white;
+	float: right;
 h1,
 h2,
 h3,
@@ -106,6 +110,10 @@ hr {
 		display: flex;
 		flex: auto;
 	 }
+	 .main{
+		display: flex;
+		flex: content;
+	 }
 		.myText{
 			display: flex;
 		}	
@@ -113,14 +121,14 @@ hr {
 }
 
 /* Desktop Media Query */
-@media (min-width: 999px) {
+@media (max-width: 500px) {
  .container{
 	display: flex;
 	flex: auto;
  }
 	.myText{
 		display: flex;
-	}
+		flex: auto;	}
 
 
 }
